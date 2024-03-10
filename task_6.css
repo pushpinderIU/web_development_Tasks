@@ -1,0 +1,107 @@
+/* here is im targetting the body and html tag
+font-family attribute is used to tell the browser which font for text is used in this document
+padding and margin are used to tell the brwoser the space around the document which is set to 0 , so space around them
+background-color is used for the document background color as its name tells and its value is shown below*/
+body, html {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #111827;
+}
+/*.container here im targetting the tag which has the class name = container
+max-width is considered as maximum width of the tag which is set to "600 px" wpx here is for pixels
+margin = auto is for it will automatically adjust the space around it.
+border-radius is used to give the roundness from the corner and their value is declared in percentage
+padding is the inner space of the div and it is set in pixels which is 20px
+background color of the div and its value for the color
+box-shadow is used to give some shadow to the box which gives it 3d look,it values are set in pixels 
+first value of 20 px is used for horizontal position shadow and next is used for vertical and 
+after that is used to give how much blur it should has to be and then the color and the last value in RGB is for the opacity.
+margin-top is adjust the space from the top and value in 3%
+
+*/
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 5% 5%;
+    padding: 20px;
+    background-color: hsl(0, 15%, 94%);
+    box-shadow: 20px 20px 30px  rgba(255, 255, 255, 0.5);
+    margin-top: 3%;
+   
+}
+/*h2 tag of the div which has class name .container then set its color */
+.container h2{
+    color: #0056b3;
+}
+
+/*this is to select form tag then sets its display to flex
+flex is used in css adjust the layout, flex-direction shows that everything in this form will adjust in the column position */
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*this select the tag name label 
+margintop is for space from above with 20 pixels value
+and its color sets*/
+label {
+    margin-top: 20px;
+    color: #0056b3;
+    
+}
+/*it select all the select tags 
+padding is used to give padding between them which is set to 10pixel
+margin-top is for the margin from the top
+background color is to set the color for the background
+border radius id used to give some roundness from the sides
+cursor is the mouse cursor which value is set to pointer which is consider as 
+when the mouse goes over the select tag then it will convert the mouse cursor to hand
+border is for the border of tag , values solid is used to tell that it has solid not breakable order 
+1px is for the width of the border and then its color
+*/
+select {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: hsl(0, 20%, 95%);
+    border-radius: 20px;
+    color: #172c42;
+    cursor: pointer;
+    border:solid 1px #559ae4;
+}
+/*it selects the button tag
+padding which is inner space from button text to its borders
+backgroundcolor is set 
+then color which is the color the text
+border radius is the roundness of the button and its value which make the button like capsule
+margin-top setting space above the button
+cursor as above it will conert mouse cursor to point when the mouse over it
+width is wideness of the button which is set to 30% even if the window shrinks it will adjust its size according to it
+transition attribute is used to give animation
+first value transform is used for some action like if button is hovered or focus then it will trigger
+0.4s is the time to execute 
+linear is the type of animation here is type linear
+background-color tells the animation also applies on the color and its time and the type of animation which ease here*/
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 30%;
+    transition: transform 0.4s linear, background-color 0.3s ease; 
+   
+}
+
+/* it will increase the size little bit of the button when the cursor of mouse over it
+Change background color 
+it changes opacity a bit */
+button:hover {
+    transform: scale(1.1); 
+    background-color: #0056b3; 
+    opacity: 0.8; 
+}

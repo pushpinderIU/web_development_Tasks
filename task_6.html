@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- it shows the HTML version and the type of the document -->
+
+<html lang="en">
+<!--  html tag is the root element of the document with lang is for language and  en is for "english" -->
+
+<head>
+    <!-- each html document has head tag which contain major information about it such as its title, character set, and links to scripts and stylesheets. -->
+    
+    <meta charset="UTF-8">
+    <!--meta tag is used to tell the browser how to understand the text and utf-8 is used to tell that it can contains characters of different languages -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this meta tag used to control the viewport's of the user screen which is width and height of the screen. "width=device-width" sets the width of the page that it will follow the screen-width. "initial-scale=1.0" sets the intial zoom values when the page is just loaded -->
+
+    <title>Order Computer Components</title>
+    <!--Title tag is used to show the title of the html page,that is written in the tab window  -->
+
+    <link rel="stylesheet" href="task_6.css">
+    <!-- link tag is usually used to add external libraries orr the file, now, it's linking to a stylesheet which is our CSS file "task_6.css". rel attribute is used to tell the document the relation between the imported file and the html document. "stylesheet" tells the document that file is a stylesheet. -->
+</head>
+<body>
+    <!--body tag is used to tell the document about that this is the main body of the document which is goona showed by browser-->
+    <div class="container">
+        <!--as in html every components is structured in blocks 
+            and we use div tag to declare it as a block, here is the opening of the div tag. 
+            each tag can contain class or id attribute which is used to give that 
+            tag a name and this name is used in javascript and css to apply styles or functionality-->
+        <h2>Computer Components </h2>
+        <!-- im using h2 tag wwhich is usually used to give title-->
+        <form id="orderForm">
+            <!--here is the form tag which is used to tell the document that 
+                this block is form. id attribute which is considered as the name
+            so this element can be accessble through the name of the ID, 
+        one tag can contain many class names, but each tag needs to have different ID names  -->
+            <label for="motherboard">MotherBoard:</label>
+            <!--each input field in the form needs label tag which works like giving 
+                the name to that block and for attribute is used to tell for which this
+                 label is named for as here it is used for motherboard-->
+            <select id="motherboard" name="motherboard">
+                <!--select tag works like a dropdown and it has a id tag which connects
+                label tag to this tag, and name tag is used when the form is submitted to identidy the data by their name-->
+                <option value="intel z790">intel Z790</option>
+                <!--option tag is used to tell select tag that thsoe are the following options 
+                for this specific tag, value attribute is used to retrive value for that tag 
+                 which is mostly used in javascript to get the value of the tag and there is name of the tag
+                 then their is a closing tag-->
+                <option value="intel B660">intel B660</option>
+                <option value="AMD X570">AMD X570</option>
+                <option value="AMD B650">AMD B650</option>
+                <!--this is the closing select tag to tell the document that this specific 
+                field has these values to show in that dwopdown.-->
+            </select>
+            <!--following are same as i said above-->
+            <label for="cpu">CPU:</label>
+            <select id="cpu" name="cpu">
+                <option value="Intel i5 13600K">Intel i5 13600K</option>
+                <option value="AMD Ryzen 7 7800X3D">AMD Ryzen 7 7800X3D</option>
+                <option value="Intel i5 13400F">Intel i5 13400F</option>
+                <option value="AMD Ryzen 9 7950X">AMD Ryzen 9 7950X</option>
+                <option value="Intel i9 13900K">Intel i9 13900K</option>
+                <option value="AMD Ryzen 7 5800X3D">AMD Ryzen 7 5800X3D</option>
+                <option value="Intel i7 7700K">Intel i7 7700K</option>
+                <option value="AMD Ryzen 7 8700G">AMD Ryzen 7 8700G</option>
+            </select>
+
+            <label for="gpu">GPU:</label>
+            <select id="gpu" name="gpu">
+                <option value="NVIDIA RTX 4090">NVIDIA RTX 4090</option>
+                <option value="NVIDIA RTX 4070Ti">NVIDIA RTX 4070Ti</option>
+                <option value="NVIDIA RTX 4080">NVIDIA RTX 4080</option>
+                <option value="AMD Radeon RX 7900XTX">AMD Radeon RX 7900XTX</option>
+                <option value="NVIDIA RTX 3080">NVIDIA RTX 3080</option>
+                <option value="AMD Radeon RX 7800XT">AMD Radeon RX 7800XT</option>
+            </select>
+
+            <label for="ram">RAM:</label>
+            <select id="ram" name="ram">
+                <option value="4GB">4GB</option>
+                <option value="8GB">8GB</option>
+                <option value="16GB">16GB</option>
+                <option value="32GB">32GB</option>
+            </select>
+
+            <label for="hard_drive">Hard Drive:</label>
+            <select id="hard_drive" name="hard_drive">
+                <option value="1TB_SSD">1TB SSD</option>
+                <option value="2TB_SSD">2TB SSD</option>
+                <option value="5TB_SSD">5TB SSD</option>
+                <option value="2TB_HDD">2TB HDD</option>
+                <option value="5TB_HDD">5TB HDD</option>
+                <option value="10TB_HDD">10TB HDD</option>
+            </select>
+            <label for="monitor">Monitor:</label>
+            <select id="monitor" name="monitor">
+                <option value="acer_18inch">ACER 18 Inch</option>
+                <option value="acer_22inch">Acer 22 Inch</option>
+                <option value="LG_27inch">LG 27 Inch</option>
+                <option value="Samsung_27inch">Samsung 27 Inch</option>
+            </select>
+            <label for="other_components">Other Components:</label>
+            <select id="other_components" name="other_components">
+                <option value="mouse">Mouse</option>
+                <option value="keyboard">Keyboard</option>
+                <option value="Speakers">Speakers</option>
+                <option value="printer">Printer</option>
+            </select>
+<!--this is the button tag which has type attribute subit which is used to submit the form
+and onclick attribute which is used to tell the browser that if the button is clicked 
+then run this submitForm() function which is written in javascript file.
+then their is the name of the button and the closing tag -->
+            <button type="submit" onclick="submitForm()">Submit Order</button>
+            <!--this is the closing tag of the form tag that tell browser that form
+            tag closes here-->
+        </form>
+        <!--this is the closing div tag, that indicates the block finishes here-->
+    </div>
+    <!--this is the script tag which is used to tell the browser that 
+    if to run script file or not. mostly javascript file is declare in this tag or sometimes this
+tag can also be declared in the head  tag "src" attribute is used to tell which file to run. -->
+    <script src="task_6.js"></script>
+    <!--closing body tag-->
+</body>
+<!-- closing html tag-->
+</html>
